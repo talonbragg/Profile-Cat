@@ -1,0 +1,27 @@
+<html>
+	<head>		
+		<script src="public/angular.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+	</head>
+	<body ng-app="myapp">
+		<h1>Page Linker</h1>
+			<div id="main" ng-controller="MainController">
+				<div class="card">
+					<profile info="talonbragg"></profile>
+				</div>
+				<div class="card">
+					<profile info="adambragg"></profile>
+				</div>
+			</div>
+
+			<!-- App -->
+			<script type="text/javascript" src="app/app.js"></script>
+
+			<!-- Controllers -->
+			<script type="text/javascript" src="app/controllers/mainController.js"></script>
+
+			<!-- Directives -->
+			<script type="text/javascript" src="app/directives/profile.js"></script>
+		</body>
+	</body>
+</html>
