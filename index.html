@@ -1,16 +1,29 @@
-<html>
+<html ng-app="myapp">
 	<head>		
 		<script src="public/angular.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 	</head>
-	<body ng-app="myapp">
+	<body ng-controller="MainController">
 		<h1>Page Linker</h1>
-			<div id="main" ng-controller="MainController">
-				<div class="card">
-					<profile info="talonbragg"></profile>
-				</div>
-				<div class="card">
-					<profile info="adambragg"></profile>
+			<div id="main">
+				<ul class="card">
+					<li ng-repeat="profile in profiles">
+						<img src="{{mainProfileObj.icon}}">
+						<a href="{{mainProfileObj.link}}"><h1>{{mainProfileObj.name}}</h1></a>
+					</li>
+				</ul>
+				<div class="main_form">
+					<form id="mainForm" ng-submit="formSubmit()" novalidate>
+						<h3>Add Profile</h3>
+						<label for="tb_name">Name:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input ng-model="mainProfileObj.name" type="text" class="Name" id="tb_name" placeholder="Johnny Appleseed"><br><br>
+						<label for="tb_link">Website Link:</label>
+						<input ng-model="mainProfileObj.link" type="text" class="link" id="tb_link" placeholder="https://mywebsite.com"><br>
+						<label for="tb_image">Image Link:</label>&nbsp;&nbsp;&nbsp;
+						<input ng-model="mainProfileObj.icon" type="text" class="icon" id="tb_image" placeholder="https://i.imgur.com/image"><br><br>
+						<button>Submit</button>
+					</form>
+					<p id="thankyou">Thank You for posting your profile!</p>
 				</div>
 			</div>
 
@@ -21,7 +34,7 @@
 			<script type="text/javascript" src="app/controllers/mainController.js"></script>
 
 			<!-- Directives -->
-			<script type="text/javascript" src="app/directives/profile.js"></script>
+			<!-- <script type="text/javascript" src="app/directives/profile.js"></script> -->
 		</body>
 	</body>
 </html>
