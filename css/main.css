@@ -46,6 +46,9 @@ input[type^="text"] {
 	border-radius:5px;
 	width:250px;
 }
+input[type^="text"]:click {
+  border: 1px solid #1ab0ec;
+}
 
 #thankyou {
 	display:none;
