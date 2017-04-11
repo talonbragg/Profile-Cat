@@ -1,0 +1,26 @@
+{
+  "name": "profilecat",
+  "version": "0.0.0",
+  "private": "true",
+  "description": "A Profile Maker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo No Test Yet",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/talonbragg/page-linker.git"
+  },
+  "author": "Talon Bragg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/talonbragg/page-linker/issues"
+  },
+  "homepage": "https://github.com/talonbragg/page-linker#readme",
+  "dependencies": {
+    "mongodb": "^2.2.11",
+    "mongoose": "^4.6.5",
+    "express": "latest"
+  }
+}
